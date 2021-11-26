@@ -2,12 +2,11 @@ import React from 'react'
 import './input.css'
 
 const FormInput = (props) => {
+	const {label, onChange, id, ...inputProps} = props
 	return (
 		<div className='formInput'>
-			{/*<label htmlFor="">Username</label>*/}
-			<input name={props.name}
-					 placeholder={props.placeholder}
-					 />
+			<label>{label}</label>
+			<input {...inputProps} onChange={onChange} />
 		</div>
 	)
 }
